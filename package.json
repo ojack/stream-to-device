@@ -1,0 +1,31 @@
+{
+  "name": "stream-to-device",
+  "version": "1.0.0",
+  "description": "Route audio streams to a specific hardware device",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo example.js --ssl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojack/stream-to-device.git"
+  },
+  "keywords": [
+    "audio",
+    "hardware",
+    "media device",
+    "webaudio",
+    "audio",
+    "device"
+  ],
+  "author": "ojac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ojack/stream-to-device/issues"
+  },
+  "homepage": "https://github.com/ojack/stream-to-device#readme",
+  "devDependencies": {
+    "enumerate-devices": "^1.1.0",
+    "get-test-media": "^1.0.0"
+  }
+}
