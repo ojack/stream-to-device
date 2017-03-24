@@ -4,7 +4,7 @@
   "description": "Route audio streams to a specific hardware device",
   "main": "index.js",
   "scripts": {
-    "start": "budo example.js --ssl"
+    "start": "budo getUserMediaExample.js --ssl"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/ojack/stream-to-device#readme",
   "devDependencies": {
     "enumerate-devices": "^1.1.0",
-    "get-test-media": "^1.0.0"
+    "get-test-media": "^1.0.0",
+    "getusermedia": "^2.0.1"
   }
 }

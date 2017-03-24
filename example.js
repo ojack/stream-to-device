@@ -1,10 +1,10 @@
-var streamDevice = require('./')
-var mediaStream = require('get-test-media')
-var enumerateDevices = require('enumerate-devices')
+const streamDevice = require('./')
+const mediaStream = require('get-test-media')
+const enumerateDevices = require('enumerate-devices')
 
 
 /* Generate audio stream for testing purposes */
-var stream = mediaStream({
+const stream = mediaStream({
   	audio: true,
   	video: false
 })
@@ -12,7 +12,7 @@ var stream = mediaStream({
 
 /* Create media device object for routing audio stream to hardware device.
 If no device is specified, sets to default device */
-var streamDevice = streamDevice({stream: stream.stream});
+const streamDevice = streamDevice({stream: stream.stream});
 
 
 /* Set hardware device from value chosen in dropdown. Accepts the deviceId from enumerate devices 

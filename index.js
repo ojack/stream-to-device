@@ -22,6 +22,7 @@ function streamToDevice(opt){
 	}
 
 	function setStream(stream){
+		// to do: check source
 		mediaEl.srcObject = stream;
 	}
 
