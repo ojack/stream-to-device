@@ -1,14 +1,13 @@
 module.exports = streamToDevice;
 
 
-function streamToDevice(opt){
-	opt = opt || {}
+function streamToDevice(media, deviceId){
 
 	const mediaEl = document.createElement("audio");
 	mediaEl.autoplay = true;
 	
-	if(opt.stream) setStream(opt.stream);
-	if(opt.sinkId) setDevice(opt.sinkId);
+	if(media) setMedia(media);
+	if(deviceId) setDevice(deviceId);
 
 	function setDevice(sinkId){
 		return new Promise(function(resolve, reject){
@@ -21,13 +20,13 @@ function streamToDevice(opt){
 		});
 	}
 
-	function setStream(stream){
+	function setMedia(m){
 		// to do: check source
-		mediaEl.srcObject = stream;
+		mediaEl.srcObject = m;
 	}
 
 	return {
 		setDevice: setDevice,
-		setStream: setStream
+		setMedia: setMedia
 	}
 }

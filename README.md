@@ -1,13 +1,29 @@
-#stream-to-device
+# stream-to-device
 
 Output a media stream (audio or video) to a [specific hardware device](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices)
 
-##Install
+## Install
 
 ```sh
 npm install stream-to-device --save
 ```
-## Usage
+
+## API
+
+#### `var stream = streamToDevice(media, deviceId)`
+
+`Media` is a [Media Stream Object](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API)
+
+`deviceId` is an identifier for each hardware device returned by [`navigator.enumerateDevices`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices)
+
+#### `stream.setDevice(deviceId)`
+
+#### `stream.setMedia(media)`
+
+
+## Example
+
+Route microphone input to hardware device chosen from dropdown
 
 ```js
 const getMedia = require('getusermedia')
@@ -19,7 +35,7 @@ getMedia({video: false, audio: true}, function (err, media) {
  	if (err) throw err
 
  	//route stream to specified device
- 	var stream = streamToDevice({stream: media, sinkId: 'default'})
+ 	var stream = streamToDevice(media, 'default')
 	
 	// create dropdown of available hardware devices
 	enumerateDevices().then(function(devices) {
@@ -47,18 +63,7 @@ getMedia({video: false, audio: true}, function (err, media) {
 
 })
 ```
-## API
-
-#### `const streamToDevice = require('stream-to-device')`
-
-send the output of a media stream to a specific hardware device.
-streamToDevice({
-	stream: stream, // stream is a 
-	sinkId: id 		// deviceId of the desired hardware device, as specified in navigator.enumerateDevices. Outputs to default if not specified.
-});
 
 
-//dynamically change stream source
 
-const s = streamToDevice();
-s.setStream
+

@@ -4,7 +4,7 @@
   "description": "Route audio streams to a specific hardware device",
   "main": "index.js",
   "scripts": {
-    "start": "budo getUserMediaExample.js --ssl"
+    "start": "budo example.js --ssl"
   },
   "repository": {
     "type": "git",
