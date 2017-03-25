@@ -12,14 +12,13 @@ npm install stream-to-device --save
 
 #### `var stream = streamToDevice(media, deviceId)`
 
-`Media` is a [Media Stream Object](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API). `deviceId` is an identifier for each hardware device returned by [`enumerateDevices`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices). If no device is specified, outputs to default hardware device.
+`media` is a [Media Stream Object](https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API). `deviceId` is an identifier for each hardware device returned by [`enumerateDevices`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices). If no device is specified, outputs to default hardware device.
 
-Change output hardware device
 #### `stream.setDevice(deviceId)`
+Change output hardware device
 
-Change stream
 #### `stream.setMedia(media)`
-
+Change MediaStream
 
 ## Example
 
